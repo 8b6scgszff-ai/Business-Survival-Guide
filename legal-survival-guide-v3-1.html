@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Legal Survival Guide for Business Owners</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--dark:#0f1419;--card:#1a2540;--card2:#1f2d4f;--gold:#f39c12;--red:#e74c3c;--green:#27ae60;--blue:#3498db;--purple:#9b59b6;--orange:#e67e22;--teal:#1abc9c}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:#fff;min-height:100vh;overflow-x:hidden}
+.screen{display:none;animation:fi .3s ease}.screen.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+/* TOP BAR */
+.top-bar{padding:16px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);background:rgba(0,0,0,.3);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;cursor:pointer}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--gold),var(--red));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px}
+.top-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s}
+.top-btn:hover{background:rgba(255,255,255,.18)}
+.demo-banner{background:linear-gradient(90deg,#c0392b,#e74c3c);padding:11px 28px;display:none;align-items:center;gap:12px;font-size:13px;font-weight:600}
+.demo-banner.show{display:flex}
+.pulse{width:9px;height:9px;border-radius:50%;background:#fff;animation:p 1.5s infinite;flex-shrink:0}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+/* LANDING */
+.landing{max-width:960px;margin:0 auto;padding:70px 24px 60px;text-align:center}
+.badge{display:inline-block;background:rgba(243,156,18,.15);color:var(--gold);border:1px solid rgba(243,156,18,.3);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+.landing h1{font-size:clamp(30px,5.5vw,52px);font-weight:900;line-height:1.05;margin-bottom:20px;letter-spacing:-1px}
+.grad{background:linear-gradient(135deg,var(--gold),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.landing-sub{font-size:clamp(14px,2vw,17px);line-height:1.65;opacity:.7;max-width:600px;margin:0 auto 48px}
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:760px;margin:0 auto 48px}
+.path-card{background:var(--card);border:2px solid rgba(255,255,255,.07);border-radius:16px;padding:32px 28px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;text-align:left}
+.path-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.path-card.c-gold:hover{border-color:var(--gold)}.path-card.c-red:hover{border-color:var(--red)}
+.pc-icon{width:54px;height:54px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px}
+.bg-gold{background:var(--gold)}.bg-red{background:var(--red)}.bg-blue{background:var(--blue)}
+.bg-orange{background:var(--orange)}.bg-purple{background:var(--purple)}.bg-teal{background:var(--teal)}
+.bg-green{background:var(--green)}.bg-gray{background:#6c757d}
+.path-card h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.path-card p{font-size:14px;line-height:1.55;opacity:.65;margin-bottom:14px}
+.pc-cta{font-size:13px;font-weight:700}
+.tc-gold{color:var(--gold)}.tc-red{color:var(--red)}.tc-blue{color:var(--blue)}
+.tc-orange{color:var(--orange)}.tc-purple{color:var(--purple)}.tc-teal{color:var(--teal)}
+.trust-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(255,255,255,.06)}
+.t-num{font-size:26px;font-weight:900;color:var(--gold);line-height:1}
+.t-lbl{font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+/* PICKER */
+.picker{max-width:900px;margin:0 auto;padding:44px 24px 60px}
+.steps{display:flex;justify-content:center;gap:8px;margin-bottom:28px}
+.s-dot{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.1);transition:background .3s}
+.s-dot.active{background:var(--gold)}.s-dot.done{background:var(--green)}
+.picker-hd{text-align:center;margin-bottom:36px}
+.picker-hd h2{font-size:clamp(24px,4vw,36px);font-weight:900;line-height:1.1;margin-bottom:10px;letter-spacing:-.5px}
+.picker-hd p{font-size:15px;opacity:.6;max-width:520px;margin:0 auto}
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:36px}
+.opt{background:var(--card);border:2px solid rgba(255,255,255,.08);border-radius:14px;padding:18px;cursor:pointer;transition:transform .15s,border-color .15s;user-select:none}
+.opt:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22)}
+.opt-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.opt-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.opt h4{font-size:15px;font-weight:700;flex:1;line-height:1.2}
+.opt-tick{width:22px;height:22px;border-radius:6px;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.opt p{font-size:12px;opacity:.55;line-height:1.45}
+.nav-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:11px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;border:none;transition:all .15s;display:inline-flex;align-items:center;gap:8px}
+.btn-p{background:linear-gradient(135deg,var(--gold),var(--red));color:#fff}
+.btn-p:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(231,76,60,.3)}
+.btn-p:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-g{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.15)}
+.btn-g:hover{background:rgba(255,255,255,.06)}
+.sel-ctr{font-size:13px;opacity:.65;font-weight:600}
+/* RESULTS */
+.results{max-width:960px;margin:0 auto;padding:28px 24px 60px}
+.sum-banner{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 26px;margin-bottom:20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.sum-banner.demo-mode{background:linear-gradient(135deg,#3d1f1f,#2a1515);border-color:rgba(231,76,60,.4)}
+.sum-icon{width:52px;height:52px;border-radius:13px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.demo-mode .sum-icon{background:var(--red)}
+.sum-text{flex:1;min-width:200px}
+.sum-lbl{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.demo-mode .sum-lbl{color:#ff6b6b}
+.sum-text h2{font-size:20px;font-weight:800;margin-bottom:4px}
+.sum-text p{font-size:13px;opacity:.7;line-height:1.5}
+.guide-note{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:12px;line-height:1.6;opacity:.82}
+.prog-wrap{background:var(--card);border-radius:12px;padding:14px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.prog-info{font-size:13px;opacity:.75;font-weight:600}
+.prog-info strong{color:var(--gold);font-size:15px}
+.prog-track-w{flex:1;min-width:180px}
+.prog-track{background:rgba(255,255,255,.08);border-radius:999px;height:8px;overflow:hidden}
+.prog-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--blue));transition:width .4s;width:0%}
+.sec-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin:32px 0 14px;display:flex;align-items:center;gap:10px}
+.sec-title .line{flex:1;height:1px;background:rgba(255,255,255,.08)}
+.c-card{background:var(--card);border-radius:16px;margin-bottom:12px;overflow:hidden;border:2px solid rgba(255,255,255,.06);transition:border-color .2s}
+.c-card.open{border-color:var(--cc,#f39c12)}
+.c-head{padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;user-select:none}
+.c-head:hover{background:rgba(255,255,255,.02)}
+.c-ico{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.c-title{flex:1}
+.c-title h3{font-size:16px;font-weight:800;margin-bottom:2px}
+.c-title p{font-size:12px;opacity:.55}
+.c-count{background:rgba(255,255,255,.06);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;opacity:.75;flex-shrink:0}
+.c-arr{font-size:13px;opacity:.4;transition:transform .2s;flex-shrink:0}
+.c-card.open .c-arr{transform:rotate(180deg)}
+.c-body{display:none;padding:0 22px 22px;border-top:1px solid rgba(255,255,255,.06)}
+.c-card.open .c-body{display:block}
+.ind-tag{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.07);border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;margin-bottom:12px;letter-spacing:.5px;margin-top:14px}
+.c-list{list-style:none}
+.c-list li{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.c-list li:last-child{border-bottom:none}
+.chk{width:22px;height:22px;border-radius:6px;border:2px solid var(--cc,#f39c12);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;margin-top:1px}
+.chk.done{background:var(--cc,#f39c12)}.chk.done::after{content:'✓';font-size:13px;font-weight:800;color:#fff}
+.chk-txt{flex:1}
+.chk-txt strong{display:block;font-size:14.5px;font-weight:700;margin-bottom:2px;line-height:1.35}
+.chk-txt span{font-size:13px;opacity:.6;line-height:1.5}
+.missed-tag{display:inline-block;background:var(--red);color:#fff;font-size:9px;padding:2px 6px;border-radius:4px;margin-right:8px;letter-spacing:1px;vertical-align:middle;font-weight:800}
+.callout{margin-top:16px;background:rgba(255,255,255,.03);border-radius:10px;padding:13px 15px;border-left:3px solid var(--cc,#f39c12)}
+.callout .cl{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--cc,#f39c12);margin-bottom:5px}
+.callout p{font-size:13px;line-height:1.55;opacity:.85}
+.gap-card{background:linear-gradient(135deg,#3a1a1a,#2a1212);border:1px solid rgba(231,76,60,.3);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.gap-card h4{font-size:15px;font-weight:800;color:#ff6b6b;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.gap-card p{font-size:13px;opacity:.8;line-height:1.5;margin-bottom:10px}
+.gap-action{font-size:12px;color:var(--gold);font-weight:700}
+footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:1px solid rgba(255,255,255,.06);margin-top:40px}
+@media(max-width:640px){.landing,.picker,.results{padding-left:18px;padding-right:18px}.top-bar{padding:14px 18px}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="logo" onclick="goHome()"><div class="logo-mark">⚖️</div>Legal Survival Guide</div>
+  <button class="top-btn" id="restartBtn" onclick="goHome()" style="display:none">↻ Start Over</button>
+</div>
+<div class="demo-banner" id="demoBanner">
+  <div class="pulse"></div>
+  <strong>Demo Mode — McDonald's Case&nbsp;</strong>
+  <span id="demoHint">Industry pre-selected. Click Next to continue.</span>
+</div>
+
+<!-- SCREEN 1: LANDING -->
+<section class="screen active" id="s1">
+  <div class="landing">
+    <div class="badge">Business Law Toolkit</div>
+    <h1>Don't let one mistake<br/><span class="grad">become your lawsuit.</span></h1>
+    <p class="landing-sub">A customized legal survival checklist for your business — built from real cases where ignored risks turned into expensive lawsuits.</p>
+    <div class="path-grid">
+      <div class="path-card c-gold" onclick="start(false)">
+        <div class="pc-icon bg-gold">🛠️</div>
+        <h3>Build Your Guide</h3>
+        <p>Tell us your industry and what you're worried about. Get a checklist tailored to your specific risks — plus critical gaps you may be overlooking.</p>
+        <div class="pc-cta tc-gold">Get started →</div>
+      </div>
+      <div class="path-card c-red" onclick="start(true)">
+        <div class="pc-icon bg-red">📖</div>
+        <h3>See the McDonald's Demo</h3>
+        <p>Walk through Liebeck v. McDonald's step by step. See which customer-safety and product-liability lessons matter for business owners.</p>
+        <div class="pc-cta tc-red">Watch demo →</div>
+      </div>
+    </div>
+    <div class="trust-row">
+      <div><div class="t-num">$2.86M</div><div class="t-lbl">McDonald's verdict</div></div>
+      <div><div class="t-num">700+</div><div class="t-lbl">Prior complaints ignored</div></div>
+      <div><div class="t-num">180-190°F</div><div class="t-lbl">Coffee temperature</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 2: INDUSTRY -->
+<section class="screen" id="s2">
+  <div class="picker">
+    <div class="steps"><div class="s-dot active"></div><div class="s-dot"></div><div class="s-dot"></div></div>
+    <div class="picker-hd">
+      <h2>What kind of business do you run?</h2>
+      <p>This shapes which industry-specific risks appear in your checklist — on top of the general rules every business needs.</p>
+    </div>
+    <div class="opt-grid">
+      <div class="opt" data-v="restaurant" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-red">🍔</div><h4>Restaurant / Food Service</h4><div class="opt-tick" id="it-restaurant"></div></div>
+        <p>Cafes, restaurants, food trucks, catering</p>
+      </div>
+      <div class="opt" data-v="retail" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-blue">🛍️</div><h4>Retail / E-commerce</h4><div class="opt-tick" id="it-retail"></div></div>
+        <p>Storefronts, online shops, wholesale</p>
+      </div>
+      <div class="opt" data-v="manufacturing" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-orange">🏭</div><h4>Manufacturing / Warehouse</h4><div class="opt-tick" id="it-manufacturing"></div></div>
+        <p>Factories, fabrication, distribution</p>
+      </div>
+      <div class="opt" data-v="office" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-purple">💼</div><h4>Office / Professional</h4><div class="opt-tick" id="it-office"></div></div>
+        <p>Consulting, services, tech, agency work</p>
+      </div>
+      <div class="opt" data-v="construction" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-teal">🏗️</div><h4>Construction / Trades</h4><div class="opt-tick" id="it-construction"></div></div>
+        <p>Contractors, skilled trades, site work</p>
+      </div>
+      <div class="opt" data-v="other" onclick="pickInd(this)">
+        <div class="opt-top"><div class="opt-icon bg-gray">🧩</div><h4>Other / Mixed</h4><div class="opt-tick" id="it-other"></div></div>
+        <p>Something else — show me everything</p>
+      </div>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-g" onclick="goHome()">← Back</button>
+      <div class="sel-ctr"><span id="indCtr">Select an industry to continue</span></div>
+      <button class="btn btn-p" id="indNext" disabled onclick="goS3()">Next →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 3: CONCERNS -->
+<section class="screen" id="s3">
+  <div class="picker">
+    <div class="steps"><div class="s-dot done"></div><div class="s-dot active"></div><div class="s-dot"></div></div>
+    <div class="picker-hd">
+      <h2>What are you most worried about?</h2>
+      <p>Select all that apply. We'll also flag related risks you didn't choose.</p>
+    </div>
+    <div class="opt-grid">
+      <div class="opt" data-v="customer" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-red">👥</div><h4>Customer &amp; Visitor Safety</h4><div class="opt-tick" id="ct-customer"></div></div>
+        <p>Injuries, product liability, premises hazards</p>
+      </div>
+      <div class="opt" data-v="employee" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-orange">👷</div><h4>Employee Safety</h4><div class="opt-tick" id="ct-employee"></div></div>
+        <p>Workplace injuries, equipment, OSHA basics</p>
+      </div>
+      <div class="opt" data-v="contracts" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-blue">📝</div><h4>Contracts &amp; Agreements</h4><div class="opt-tick" id="ct-contracts"></div></div>
+        <p>Vendor, client, and employment contracts</p>
+      </div>
+      <div class="opt" data-v="ip" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-purple">💡</div><h4>Intellectual Property</h4><div class="opt-tick" id="ct-ip"></div></div>
+        <p>Trademarks, copyrights, trade secrets</p>
+      </div>
+      <div class="opt" data-v="hiring" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-teal">🧑‍💼</div><h4>Hiring &amp; HR</h4><div class="opt-tick" id="ct-hiring"></div></div>
+        <p>Discrimination, wrongful termination, wages</p>
+      </div>
+      <div class="opt" data-v="osha" onclick="pickCon(this)">
+        <div class="opt-top"><div class="opt-icon bg-green">📋</div><h4>OSHA &amp; Regulatory</h4><div class="opt-tick" id="ct-osha"></div></div>
+        <p>Inspections, violations, reporting requirements</p>
+      </div>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-g" onclick="show('s2')">← Back</button>
+      <div class="sel-ctr"><strong id="conCtr" style="color:var(--gold)">0</strong> selected</div>
+      <button class="btn btn-p" id="conNext" disabled onclick="buildResults()">Build My Guide →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 4: RESULTS -->
+<section class="screen" id="s4">
+  <div class="results">
+    <div id="sumBanner" class="sum-banner">
+      <div class="sum-icon" id="sumIcon">📋</div>
+      <div class="sum-text">
+        <div class="sum-lbl" id="sumLbl">YOUR CUSTOM GUIDE</div>
+        <h2 id="sumTitle">Legal Survival Guide</h2>
+        <p id="sumDesc">Based on your selections, here are the legal areas that matter most for your business.</p>
+      </div>
+    </div>
+    <div class="guide-note">Use this guide to spot risk areas and strengthen your policies. Specific legal duties can vary by state, industry, employer size, and project requirements.</div>
+    <div class="prog-wrap">
+      <div class="prog-info">Progress: <strong id="progTxt">0 / 0</strong></div>
+      <div class="prog-track-w"><div class="prog-track"><div class="prog-fill" id="progFill"></div></div></div>
+    </div>
+    <div id="checklistArea"></div>
+    <div id="gapsArea"></div>
+    <div style="text-align:center;margin-top:32px">
+      <button class="btn btn-g" onclick="show('s3');resetProgress()">← Change Selections</button>
+    </div>
+  </div>
+  <footer>Legal Survival Guide · Liebeck v. McDonald's (1994) · For educational purposes only — not legal advice; laws vary by state and industry.</footer>
+</section>
+
+<script>
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+let isDemo = false;
+let selInd = null;
+let selCons = new Set();
+
+// ═══════════════════════════════════════════
+// CONTENT: general items per concern
+// ═══════════════════════════════════════════
+const GENERAL = {
+  customer: {
+    color:'#e74c3c', icon:'👥',
+    title:'Customer & Visitor Safety',
+    sub:'Product liability, premises safety, and known hazards',
+    items:[
+      {id:'cg1', label:'Document every customer complaint in writing',
+       detail:'Keep a dated log with names and what was reported. McDonald\'s had 700+ burn complaints on record — that paper trail showed they knew the risk and ignored it.',
+       missed:true},
+      {id:'cg2', label:'Post clear warnings for all known hazards',
+       detail:'Hot surfaces, wet floors, and sharp edges can create serious liability if customers are not adequately warned. Signs should be visible and specific.',
+       missed:true},
+      {id:'cg3', label:'Address reported hazards before someone gets hurt',
+       detail:'A complaint log showing you knew about a problem but didn\'t fix it is worse than no log at all. Every complaint needs a documented follow-up action.',
+       missed:true},
+      {id:'cg4', label:'Carry adequate general liability insurance',
+       detail:'Workers\' comp covers employees. General liability covers customers and visitors. Review your coverage limits annually.',
+       missed:false},
+      {id:'cg5', label:'Inspect your premises regularly and log the findings',
+       detail:'Dated inspection records show a jury you took safety seriously — even if an accident still happened.',
+       missed:false},
+    ],
+    callout:{label:'📌 McDonald\'s Case',
+     text:'McDonald\'s received 700+ burn complaints before the Liebeck lawsuit. The jury found them 80% liable — not because an accident happened, but because they had documented proof they knew the risk and chose to ignore it.'}
+  },
+  employee: {
+    color:'#e67e22', icon:'👷',
+    title:'Employee Safety',
+    sub:'Workplace hazards, equipment, and training',
+    items:[
+      {id:'eg1', label:'Ensure all required safety guards and devices are in place',
+       detail:'Removing or bypassing a required safety guard can sharply increase injury risk and create major safety and legal exposure.',
+       missed:true},
+      {id:'eg2', label:'Conduct and document regular safety inspections',
+       detail:'Walk the facility, note every hazard, and document corrective actions. A signed inspection log proves you took your obligations seriously.',
+       missed:true},
+      {id:'eg3', label:'Keep signed, dated safety training records for every employee',
+       detail:'Verbal training doesn\'t hold up in court. Every session needs a sign-off sheet with names, dates, and topics covered.',
+       missed:false},
+      {id:'eg4', label:'Document near-misses and close calls immediately',
+       detail:'Near-misses that go unrecorded are missed warnings. If the same hazard later causes an injury, missing records can make it appear the business ignored warning signs.',
+       missed:true},
+      {id:'eg5', label:'Never allow supervisors to work impaired',
+       detail:'An impaired supervisor creates major safety and liability risk and can make a serious workplace injury much harder for the business to defend.',
+       missed:false},
+    ],
+    callout:{label:'⚠️ Real-World Example',
+     text:'In workplace injury cases, missing guards or ignored safety procedures can lead to severe injuries, OSHA problems, and major legal exposure.'}
+  },
+  osha: {
+    color:'#27ae60', icon:'📋',
+    title:'OSHA Reporting & Compliance',
+    sub:'What you\'re legally required to report and when',
+    items:[
+      {id:'og1', label:'Report fatalities to OSHA within 8 hours',
+       detail:'Any work-related death must be reported to OSHA within 8 hours. Call 1-800-321-OSHA or report at osha.gov. This is a strict reporting deadline.',
+       missed:false},
+      {id:'og2', label:'Report hospitalizations, amputations, and eye loss within 24 hours',
+       detail:'Missing this window can lead to significant penalties and can make a business look careless during an investigation.',
+       missed:true},
+      {id:'og3', label:'Maintain an OSHA 300 Log when required',
+       detail:'Many covered employers must maintain an OSHA 300 Log for recordable injuries and illnesses. Some low-hazard industries and smaller employers are partially exempt.',
+       missed:true},
+      {id:'og4', label:'Post your OSHA 300A Summary when required',
+       detail:'Covered employers must post the annual injury summary in a visible employee area from February 1 to April 30 each year.',
+       missed:false},
+      {id:'og5', label:'Never retaliate against employees who report hazards',
+       detail:'Firing, demoting, or threatening an employee who filed a safety complaint adds a separate federal violation on top of any existing liability.',
+       missed:false},
+    ],
+    callout:{label:'📌 Why This Matters in Court',
+     text:'Missed OSHA reports are not just paperwork problems. In litigation, they can be used as evidence that a business handled a serious incident poorly or failed to follow basic safety obligations.'}
+  },
+  contracts: {
+    color:'#3498db', icon:'📝',
+    title:'Contracts & Agreements',
+    sub:'Making sure your agreements actually hold up',
+    items:[
+      {id:'ctg1', label:'Put every significant agreement in writing',
+       detail:'Verbal agreements are enforceable but nearly impossible to prove. Control the written record.',
+       missed:false},
+      {id:'ctg2', label:'Understand that "I was joking" is not a legal defense',
+       detail:'Courts use the objective standard: if a reasonable person would believe you intended a real agreement, you\'re bound by it — regardless of what you were thinking.',
+       missed:false},
+      {id:'ctg3', label:'Include offer, acceptance, and consideration in every contract',
+       detail:'A valid contract needs something of value exchanged by both parties. Missing any element makes it potentially unenforceable.',
+       missed:false},
+      {id:'ctg4', label:'Control who is authorized to sign contracts on behalf of your business',
+       detail:'A manager who signs an agreement without approval may still bind your company if their authority appears legitimate. Define signing authority in writing.',
+       missed:false},
+      {id:'ctg5', label:'Keep organized copies of every signed agreement',
+       detail:'Disputes come down to "what did we agree to?" You need a paper trail — stored somewhere secure, not just in someone\'s inbox.',
+       missed:false},
+    ],
+    callout:{label:'📌 Contract Lesson',
+     text:'Courts focus heavily on what the parties said and did, not just what one side later claims they meant. Clear written terms and clear signing authority help prevent disputes.'}
+  },
+  ip: {
+    color:'#9b59b6', icon:'💡',
+    title:'Intellectual Property',
+    sub:'Protecting what makes your business yours',
+    items:[
+      {id:'ipg1', label:'Register your business name and logo as a trademark',
+       detail:'Federal trademark registration gives you nationwide protection and the legal right to stop others from using a confusingly similar name.',
+       missed:false},
+      {id:'ipg2', label:'Use written agreements to own what contractors create',
+       detail:'Without a "work for hire" clause, the person who creates something may own it — even if you paid for it.',
+       missed:false},
+      {id:'ipg3', label:'Use NDAs when sharing confidential business information',
+       detail:'Trade secrets are only protected if you treat them as secret. Sharing proprietary processes without confidentiality protections can seriously weaken your ability to protect them.',
+       missed:false},
+      {id:'ipg4', label:'Don\'t use others\' images, music, or content without a license',
+       detail:'Grabbing a photo off Google or using a song in a video are common mistakes that carry real copyright liability.',
+       missed:false},
+      {id:'ipg5', label:'Timestamp when you created proprietary work',
+       detail:'In IP disputes, dates matter. Keep timestamped records of when you developed a product, brand, or process.',
+       missed:false},
+    ],
+    callout:{label:'💡 Why This Matters',
+     text:'Many small businesses lose valuable IP rights simply because they never formalized them. Trademarks and trade secrets don\'t protect themselves — they require proactive action.'}
+  },
+  hiring: {
+    color:'#1abc9c', icon:'🧑‍💼',
+    title:'Hiring & HR Compliance',
+    sub:'Employment law basics that protect your business',
+    items:[
+      {id:'hg1', label:'Document the criteria used for every hiring decision',
+       detail:'Hiring decisions that can\'t be explained in writing create discrimination exposure. Write down what qualifications you required and why you chose who you chose.',
+       missed:false},
+      {id:'hg2', label:'Have every employee sign an offer letter and job description',
+       detail:'Disputes about duties, pay, and expectations are much easier to resolve with a signed written record.',
+       missed:false},
+      {id:'hg3', label:'Classify employees vs. independent contractors correctly',
+       detail:'Misclassifying employees as contractors creates back tax liability, benefit obligations, and regulatory penalties.',
+       missed:false},
+      {id:'hg4', label:'Investigate every harassment or discrimination complaint promptly',
+       detail:'Failing to investigate — or retaliating against the person who filed — can create serious liability and HR problems. Document every step.',
+       missed:false},
+      {id:'hg5', label:'Follow consistent termination procedures with documentation',
+       detail:'Written performance records, progressive discipline, and a consistent process make wrongful termination claims much harder to win.',
+       missed:false},
+    ],
+    callout:{label:'📌 Common Costly Mistake',
+     text:'Many small businesses skip formal HR processes because they feel corporate. But employment disputes are among the most common lawsuits businesses face — and the most preventable with basic documentation.'}
+  }
+};
+
+// ═══════════════════════════════════════════
+// INDUSTRY-SPECIFIC ITEMS
+// format: concern -> industry -> [{label, detail, missed}]
+// ═══════════════════════════════════════════
+const INDUSTRY_ITEMS = {
+  customer: {
+    restaurant:[
+      {label:'Verify food temperatures meet safe serving standards',
+       detail:'Food served too hot can cause burns, and food served too cold can create bacteria risks. Log temperatures and train staff on proper ranges. McDonald\'s coffee at 180–190°F was the core issue in the Liebeck case.',
+       missed:true},
+      {label:'Post allergen warnings clearly on menus and food displays',
+       detail:'Failure to disclose allergens is a major source of restaurant lawsuits. Staff must also be trained to answer allergen questions accurately.',
+       missed:false},
+      {label:'Inspect floors, walkways, and seating for hazards before each service',
+       detail:'Slip-and-fall injuries are the most common customer claim in food service. A dated pre-shift checklist is your best defense.',
+       missed:false},
+    ],
+    retail:[
+      {label:'Secure all shelving, displays, and fixtures to prevent tip-overs',
+       detail:'Falling merchandise is a common source of retail customer injuries. Heavy or tall displays should be anchored and checked regularly.',
+       missed:false},
+      {label:'Keep aisles and emergency exits clear at all times',
+       detail:'Blocked exits are both a fire code issue and a premises safety problem. If someone gets hurt while trying to exit, the business can face serious legal exposure.',
+       missed:false},
+      {label:'Review product recall notices regularly and pull flagged items immediately',
+       detail:'Selling a recalled product after notice creates serious product-liability exposure because the business knew about the risk and kept selling it anyway.',
+       missed:true},
+    ],
+    manufacturing:[
+      {label:'Test finished products against your stated specifications before shipping',
+       detail:'Products that fail to meet advertised standards — especially safety-related ones — expose you to product liability even if the customer is a business, not a consumer.',
+       missed:false},
+      {label:'Maintain Material Safety Data Sheets for all hazardous substances',
+       detail:'Customers and downstream users may be harmed by improper handling. Safety data sheets are legally required and help show the business handled hazardous materials responsibly.',
+       missed:false},
+    ],
+    construction:[
+      {label:'Secure job sites to prevent unauthorized access by the public',
+       detail:'An unlocked construction site can create serious liability if a member of the public gets hurt, even if they were not authorized to be there.',
+       missed:false},
+      {label:'Clearly mark all hazardous areas with barriers and signage',
+       detail:'Open trenches, scaffolding, and heavy equipment near public areas require visible barriers. Inadequate marking can strongly support a negligence claim.',
+       missed:false},
+    ],
+    office:[
+      {label:'Ensure visitor areas meet basic safety and accessibility standards',
+       detail:'Trip hazards, poor lighting, and inaccessible entrances create both tort and ADA liability for professional offices.',
+       missed:false},
+    ],
+    other:[]
+  },
+  employee: {
+    restaurant:[
+      {label:'Install and maintain non-slip mats in all kitchen and wet areas',
+       detail:'Kitchen floors are a major source of restaurant employee injuries. Non-slip mats are inexpensive; preventable slip-and-fall claims are not.',
+       missed:false},
+      {label:'Train staff on safe handling of hot equipment and liquids',
+       detail:'Burns from fryers, ovens, and hot beverages are common — and preventable. Documented training matters when a claim is filed.',
+       missed:true},
+      {label:'Enforce knife safety protocols and cut-resistant glove use',
+       detail:'Lacerations are the second most common restaurant employee injury. Glove policies need to be documented and enforced, not just mentioned at hiring.',
+       missed:false},
+    ],
+    manufacturing:[
+      {label:'Implement lockout/tagout procedures for all equipment maintenance',
+       detail:'LOTO is one of OSHA\'s most cited standards. Failing to lock out energy sources during maintenance is a top cause of serious manufacturing injuries.',
+       missed:true},
+      {label:'Ensure all moving parts, pinch points, and press equipment have required guards',
+       detail:'Missing guards on presses and other machinery is a serious machine-safety failure that can lead to OSHA problems, severe injuries, and major legal exposure.',
+       missed:true},
+      {label:'Require and enforce PPE use for every job that needs it',
+       detail:'Having PPE available isn\'t enough — use must be enforced and documented. An unenforced PPE policy carries much less weight after an injury.',
+       missed:false},
+      {label:'Conduct equipment-specific training before any operator uses machinery',
+       detail:'Generic safety training doesn\'t cover machine-specific risks. Operators need documented training on each specific piece of equipment.',
+       missed:true},
+    ],
+    construction:[
+      {label:'Enforce fall protection requirements at all heights above 6 feet',
+       detail:'Falls are the leading cause of construction fatalities. OSHA requires fall protection at 6 feet in construction — guardrails, safety nets, or personal fall arrest.',
+       missed:false},
+      {label:'Follow confined space entry procedures every time',
+       detail:'Confined space entries without proper atmospheric testing and standby personnel have killed multiple workers at once. The procedures exist for a reason.',
+       missed:false},
+      {label:'Maintain a site safety plan and conduct daily hazard assessments',
+       detail:'Conditions change daily on construction sites. A morning safety huddle with documented hazard notes protects you when something goes wrong.',
+       missed:false},
+    ],
+    retail:[
+      {label:'Train employees on safe lifting techniques for stock and inventory',
+       detail:'Back injuries from improper lifting are among the most common retail workers\' comp claims. They\'re also almost entirely preventable with basic training.',
+       missed:false},
+      {label:'Use proper ladder safety procedures for stocking high shelves',
+       detail:'Falls from ladders are a top retail injury. Employees need documented training — never use a ladder alone, maintain three points of contact.',
+       missed:false},
+    ],
+    office:[
+      {label:'Conduct ergonomic assessments for workstations',
+       detail:'Repetitive strain and ergonomic injuries are the most common office workers\' comp claims. A simple workstation audit can prevent years of claims.',
+       missed:false},
+      {label:'Maintain clear emergency evacuation routes and conduct annual drills',
+       detail:'Both OSHA and fire codes require evacuation plans. Document the plan, post it, and run drills at least annually.',
+       missed:false},
+    ],
+    other:[]
+  },
+  osha: {
+    restaurant:[
+      {label:'Display the OSHA "It\'s The Law" poster in a visible employee area',
+       detail:'Every employer covered by OSHA must post this notice. It\'s free, required, and one of the first things an inspector is likely to look for.',
+       missed:false},
+      {label:'Keep chemical safety data sheets for all cleaning products',
+       detail:'Restaurants use caustic cleaning chemicals. OSHA requires SDS sheets to be accessible to employees who use them.',
+       missed:false},
+    ],
+    manufacturing:[
+      {label:'Conduct annual OSHA compliance audits before an inspector does',
+       detail:'Self-audits let you find and fix violations before they become citations. Document the audit and any corrective actions taken.',
+       missed:false},
+      {label:'Maintain a written Hazard Communication Program',
+       detail:'If your facility uses hazardous chemicals, a written HazCom program is a federal requirement.',
+       missed:true},
+    ],
+    construction:[
+      {label:'Confirm whether OSHA 10 or OSHA 30 training cards are required',
+       detail:'OSHA 10 and OSHA 30 courses are often required by states, cities, general contractors, or employers on construction projects, even though they are not a universal federal requirement.',
+       missed:false},
+      {label:'Keep a site-specific safety plan on file and update it as conditions change',
+       detail:'A written site safety plan is required on most commercial construction projects and increasingly required by general contractors.',
+       missed:false},
+    ],
+    retail:[],
+    office:[],
+    other:[]
+  },
+  contracts: {
+    restaurant:[
+      {label:'Have written supplier agreements that specify food quality and delivery standards',
+       detail:'If a supplier delivers contaminated food and you serve it, you may share liability. Written agreements that require safe product shift more of that risk back.',
+       missed:false},
+      {label:'Use written catering and event contracts with liability and cancellation terms',
+       detail:'Verbal catering agreements are a constant source of disputes. Include what\'s included, what\'s not, deposit terms, and who\'s responsible if something goes wrong.',
+       missed:false},
+    ],
+    manufacturing:[
+      {label:'Include indemnification clauses in contracts with distributors and retailers',
+       detail:'If a downstream seller modifies or misrepresents your product, indemnification language can protect you from liability you didn\'t create.',
+       missed:false},
+      {label:'Define warranty terms explicitly — and only promise what you can deliver',
+       detail:'Vague warranty language creates open-ended liability. Be specific about what you warrant, for how long, and what\'s excluded.',
+       missed:false},
+    ],
+    construction:[
+      {label:'Use written subcontractor agreements that include insurance requirements',
+       detail:'If a subcontractor gets hurt on your site without proper insurance, the business can face major liability and insurance problems. Require proof of coverage before work starts and keep it on file.',
+       missed:false},
+      {label:'Include change order procedures in every contract',
+       detail:'Scope creep and verbal change orders are a common source of construction contract disputes. Every change should be documented and signed.',
+       missed:false},
+    ],
+    retail:[
+      {label:'Have written vendor agreements for every major supplier',
+       detail:'Handshake deals with vendors leave you exposed on pricing, delivery, quality, and liability if their product harms a customer.',
+       missed:false},
+    ],
+    office:[
+      {label:'Use engagement letters or service agreements with every client',
+       detail:'Scope disputes are the most common professional services conflict. A signed engagement letter defining deliverables, timeline, and fees prevents most of them.',
+       missed:false},
+    ],
+    other:[]
+  },
+  ip:{restaurant:[],retail:[{label:'Protect your brand with a federal trademark before someone else does',detail:'Retail brands are highly imitable. A federal trademark filing is inexpensive compared to the cost of rebranding after a cease and desist.',missed:false}],manufacturing:[{label:'Document your manufacturing processes as trade secrets with NDAs for all employees who access them',detail:'Proprietary processes are often more valuable than patents — but only if you treat them as secret. NDAs and access controls are your protection.',missed:false}],construction:[],office:[{label:'Use engagement letters that specify who owns work product created for clients',detail:'Without explicit IP assignment language, there may be ambiguity about whether a client owns custom work you created for them.',missed:false}],other:[]},
+  hiring:{restaurant:[{label:'Document tip policies, tip pools, and tip credits in writing',detail:'Tip wage violations are one of the most common labor law problems in food service. Federal and state tip rules vary — make sure your policy is documented and compliant.',missed:false},{label:'Track and record all hours worked, including overtime',detail:'Off-the-clock work claims are common in restaurants. Time records must be accurate — rounding or adjusting punches can create serious wage-and-hour liability.',missed:false}],manufacturing:[{label:'Document all shift differential, overtime, and piece-rate pay calculations',detail:'Manufacturing payroll errors are common with complex pay structures. Wage and hour problems can quickly turn into expensive employee claims.',missed:false},{label:'Have a written policy for medical leave and return-to-work after injury',detail:'How you handle workers returning after an injury is heavily regulated. A written policy applied consistently helps reduce retaliation risk.',missed:false}],construction:[{label:'Keep I-9 documentation current for every worker on every job site',detail:'Construction is a heavily audited industry for worker documentation. Violations carry per-worker fines that add up quickly on larger sites.',missed:false}],retail:[{label:'Document your scheduling practices and any predictive scheduling requirements in your area',detail:'Several states and cities now require advance notice of schedules. Violations carry per-employee fines — check local law.',missed:false}],office:[{label:'Have a written remote work policy that addresses hours, equipment, and confidentiality',detail:'Remote work creates new HR ambiguity around overtime, expense reimbursement, and data security. A clear written policy prevents most disputes.',missed:false}],other:[]}
+};
+
+// ═══════════════════════════════════════════
+// GAP RULES
+// ═══════════════════════════════════════════
+const GAP_RULES = [
+  {requires:'employee', missing:'osha',
+   title:'Employee Safety without OSHA Compliance',
+   text:'If you\'re managing employee safety risks, OSHA reporting requirements are part of that picture. Failing to report a serious injury within 24 hours adds a separate violation and can make the business look careless to investigators.',
+   action:'Consider adding OSHA & Regulatory'},
+  {requires:'customer', missing:'employee',
+   title:'Customer Safety without Employee Safety',
+   text:'The conditions that hurt customers often hurt employees too. Unguarded machinery, unmarked hazards, and missing safety equipment affect everyone on your premises.',
+   action:'Consider adding Employee Safety'},
+  {requires:'hiring', missing:'contracts',
+   title:'Hiring without Contracts',
+   text:'Offer letters, employment agreements, and IP assignments are contracts. Without written agreements, disputes about pay, duties, and who owns work product become hard to resolve.',
+   action:'Consider adding Contracts & Agreements'},
+  {requires:'ip', missing:'contracts',
+   title:'IP Protection without Contracts',
+   text:'NDAs and work-for-hire agreements are your primary IP protection tools. IP protection without contract basics leaves major gaps.',
+   action:'Consider adding Contracts & Agreements'},
+];
+
+// Demo presets
+const DEMO_IND = 'restaurant';
+const DEMO_CONS = ['customer','employee','osha'];
+
+// ═══════════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════════
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function goHome(){
+  isDemo=false; selInd=null; selCons.clear();
+  document.getElementById('demoBanner').classList.remove('show');
+  document.getElementById('restartBtn').style.display='none';
+  // reset industry visuals
+  document.querySelectorAll('#s2 .opt').forEach(o=>{
+    o.classList.remove('sel');
+    o.querySelector('.opt-tick').style.background='';
+    o.querySelector('.opt-tick').style.borderColor='';
+    o.querySelector('.opt-tick').textContent='';
+  });
+  document.getElementById('indCtr').textContent='Select an industry to continue';
+  document.getElementById('indNext').disabled=true;
+  // reset concern visuals
+  document.querySelectorAll('#s3 .opt').forEach(o=>{
+    o.classList.remove('sel');
+    o.querySelector('.opt-tick').style.background='';
+    o.querySelector('.opt-tick').style.borderColor='';
+    o.querySelector('.opt-tick').textContent='';
+  });
+  document.getElementById('conCtr').textContent='0';
+  document.getElementById('conNext').disabled=true;
+  show('s1');
+}
+
+function resetProgress(){
+  // uncheck all boxes when going back to change selections
+  document.querySelectorAll('#s4 .chk').forEach(c=>c.classList.remove('done'));
+  document.getElementById('progFill').style.width='0%';
+}
+
+function start(demo){
+  isDemo=demo;
+  document.getElementById('restartBtn').style.display='block';
+  if(demo){
+    document.getElementById('demoBanner').classList.add('show');
+    document.getElementById('demoHint').textContent='Industry pre-selected based on McDonald\'s case. Click Next to continue.';
+    selInd=DEMO_IND;
+    const indOpt = document.querySelector('#s2 .opt[data-v="'+DEMO_IND+'"]');
+    if(indOpt) highlightOpt(indOpt,'#e74c3c');
+    document.getElementById('indCtr').textContent='Restaurant / Food Service selected';
+    document.getElementById('indNext').disabled=false;
+  }
+  show('s2');
+}
+
+function highlightOpt(el, color){
+  el.classList.add('sel');
+  el.style.borderColor=color;
+  const tick = el.querySelector('.opt-tick');
+  tick.style.background=color;
+  tick.style.borderColor=color;
+  tick.textContent='✓';
+  tick.style.color='#fff';
+  tick.style.fontSize='13px';
+  tick.style.fontWeight='800';
+}
+function unhighlightOpt(el){
+  el.classList.remove('sel');
+  el.style.borderColor='';
+  const tick = el.querySelector('.opt-tick');
+  tick.style.background='';
+  tick.style.borderColor='';
+  tick.textContent='';
+}
+
+// Industry color map
+const IND_COLORS = {restaurant:'#e74c3c',retail:'#3498db',manufacturing:'#e67e22',office:'#9b59b6',construction:'#1abc9c',other:'#6c757d'};
+const CON_COLORS = {customer:'#e74c3c',employee:'#e67e22',contracts:'#3498db',ip:'#9b59b6',hiring:'#1abc9c',osha:'#27ae60'};
+
+function pickInd(el){
+  if(isDemo) return;
+  document.querySelectorAll('#s2 .opt').forEach(o=>unhighlightOpt(o));
+  selInd=el.dataset.v;
+  highlightOpt(el, IND_COLORS[selInd]||'#f39c12');
+  const labels={restaurant:'Restaurant / Food Service',retail:'Retail / E-commerce',manufacturing:'Manufacturing / Warehouse',office:'Office / Professional',construction:'Construction / Trades',other:'Other / Mixed'};
+  document.getElementById('indCtr').textContent=(labels[selInd]||'Industry')+' selected';
+  document.getElementById('indNext').disabled=false;
+}
+
+function goS3(){
+  if(isDemo){
+    document.getElementById('demoHint').textContent='Customer safety is highlighted for the McDonald\'s case, with employee and OSHA sections included as broader restaurant risk controls.';
+    selCons.clear();
+    DEMO_CONS.forEach(v=>{
+      selCons.add(v);
+      const el=document.querySelector('#s3 .opt[data-v="'+v+'"]');
+      if(el) highlightOpt(el, CON_COLORS[v]||'#f39c12');
+    });
+    document.getElementById('conCtr').textContent=selCons.size;
+    document.getElementById('conNext').disabled=false;
+  }
+  show('s3');
+}
+
+function pickCon(el){
+  if(isDemo) return;
+  const v=el.dataset.v;
+  if(el.classList.contains('sel')){
+    unhighlightOpt(el);
+    selCons.delete(v);
+  } else {
+    highlightOpt(el, CON_COLORS[v]||'#f39c12');
+    selCons.add(v);
+  }
+  document.getElementById('conCtr').textContent=selCons.size;
+  document.getElementById('conNext').disabled=selCons.size===0;
+}
+
+// ═══════════════════════════════════════════
+// BUILD RESULTS
+// ═══════════════════════════════════════════
+function buildResults(){
+  const area=document.getElementById('checklistArea');
+  const gapsArea=document.getElementById('gapsArea');
+  area.innerHTML=''; gapsArea.innerHTML='';
+
+  // Banner
+  const banner=document.getElementById('sumBanner');
+  if(isDemo){
+    banner.classList.add('demo-mode');
+    document.getElementById('sumLbl').textContent="DEMO — LIEBECK V. McDONALD'S (1994)";
+    document.getElementById('sumIcon').textContent='📖';
+    document.getElementById('sumTitle').textContent="The McDonald's Case: Product-Safety Lessons";
+    document.getElementById('sumDesc').textContent='Items marked CASE ISSUE are the checklist points most directly connected to the lawsuit. Other sections show broader restaurant risk controls.';
+  } else {
+    banner.classList.remove('demo-mode');
+    document.getElementById('sumLbl').textContent='YOUR CUSTOM GUIDE';
+    document.getElementById('sumIcon').textContent='📋';
+    const indLabels={restaurant:'Restaurant',retail:'Retail',manufacturing:'Manufacturing',office:'Office',construction:'Construction',other:'Business'};
+    document.getElementById('sumTitle').textContent='Legal Survival Guide — '+(indLabels[selInd]||'Your Business');
+    document.getElementById('sumDesc').textContent='Core legal risk areas plus '+( indLabels[selInd]||'your industry')+'-specific reminders.';
+  }
+
+  const order=isDemo?['customer','employee','osha']:['customer','employee','osha','contracts','ip','hiring'];
+  let totalItems=0;
+
+  order.forEach(key=>{
+    if(!selCons.has(key)) return;
+    const g=GENERAL[key];
+    const indItems=(INDUSTRY_ITEMS[key]&&INDUSTRY_ITEMS[key][selInd])||[];
+    const allItems=[...g.items,...indItems];
+    totalItems+=allItems.length;
+
+    const card=document.createElement('div');
+    card.className='c-card';
+    card.style.setProperty('--cc',g.color);
+    const showCaseMisses=isDemo&&key==='customer';
+    const missedCount=showCaseMisses?allItems.filter(i=>i.missed).length:0;
+    const missedBadge=isDemo&&missedCount>0?`<span style="color:#e74c3c;font-size:11px;font-weight:700;margin-left:8px">${missedCount} case issues</span>`:'';
+
+    let generalHTML=g.items.map(item=>{
+      const tag=(showCaseMisses&&item.missed)?'<span class="missed-tag">CASE ISSUE</span>':'';
+      return `<li>
+        <div class="chk" onclick="toggleChk(event,this)"></div>
+        <div class="chk-txt"><strong>${tag}${item.label}</strong><span>${item.detail}</span></div>
+      </li>`;
+    }).join('');
+
+    let indHTML='';
+    if(indItems.length>0){
+      const indLabel=isDemo?'🍔 Related Restaurant Risks':({restaurant:'🍔 Restaurant-Specific',retail:'🛍️ Retail-Specific',manufacturing:'🏭 Manufacturing-Specific',office:'💼 Office-Specific',construction:'🏗️ Construction-Specific',other:''}[selInd]||'Industry-Specific');
+      indHTML=`<div class="ind-tag" style="color:${g.color}">${indLabel}</div>`;
+      indHTML+=indItems.map(item=>{
+        const tag=(showCaseMisses&&item.missed)?'<span class="missed-tag">CASE ISSUE</span>':'';
+        return `<li>
+          <div class="chk" onclick="toggleChk(event,this)"></div>
+          <div class="chk-txt"><strong>${tag}${item.label}</strong><span>${item.detail}</span></div>
+        </li>`;
+      }).join('');
+    }
+
+    card.innerHTML=`
+      <div class="c-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="c-ico" style="background:${g.color}">${g.icon}</div>
+        <div class="c-title"><h3>${g.title}${missedBadge}</h3><p>${g.sub}</p></div>
+        <div class="c-count">${allItems.length} items</div>
+        <div class="c-arr">▼</div>
+      </div>
+      <div class="c-body">
+        <ul class="c-list">${generalHTML}</ul>
+        ${indHTML?`<ul class="c-list">${indHTML}</ul>`:''}
+        <div class="callout">
+          <div class="cl">${g.callout.label}</div>
+          <p>${g.callout.text}</p>
+        </div>
+      </div>`;
+    area.appendChild(card);
+  });
+
+  // open first card
+  const first=area.querySelector('.c-card');
+  if(first) first.classList.add('open');
+
+  document.getElementById('progTxt').textContent=`0 / ${totalItems}`;
+  document.getElementById('progFill').style.width='0%';
+
+  // Gaps
+  const gaps=isDemo ? [] : GAP_RULES.filter(g=>selCons.has(g.requires)&&!selCons.has(g.missing));
+  if(gaps.length>0){
+    const t=document.createElement('div');
+    t.className='sec-title';
+    t.innerHTML='<div class="line"></div>⚠️ Critical Gaps You May Be Overlooking<div class="line"></div>';
+    gapsArea.appendChild(t);
+    gaps.forEach(g=>{
+      const d=document.createElement('div');
+      d.className='gap-card';
+      d.innerHTML=`<h4>🚨 ${g.title}</h4><p>${g.text}</p><div class="gap-action">→ ${g.action}</div>`;
+      gapsArea.appendChild(d);
+    });
+  }
+
+  show('s4');
+}
+
+// ═══════════════════════════════════════════
+// CHECKLIST
+// ═══════════════════════════════════════════
+function toggleChk(e,box){
+  e.stopPropagation();
+  box.classList.toggle('done');
+  updateProgress();
+}
+function updateProgress(){
+  const all=document.querySelectorAll('#s4 .chk').length;
+  const done=document.querySelectorAll('#s4 .chk.done').length;
+  document.getElementById('progTxt').textContent=`${done} / ${all}`;
+  document.getElementById('progFill').style.width=all?(done/all*100)+'%':'0%';
+}
+</script>
+</body>
+</html>
