@@ -129,7 +129,7 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
 </div>
 <div class="demo-banner" id="demoBanner">
   <div class="pulse"></div>
-  <strong>Demo Mode — McDonald's Case&nbsp;</strong>
+  <strong>Demo Mode: McDonald's Case&nbsp;</strong>
   <span id="demoHint">Industry pre-selected. Click Next to continue.</span>
 </div>
 
@@ -138,12 +138,12 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
   <div class="landing">
     <div class="badge">Business Law Toolkit</div>
     <h1>Don't let one mistake<br/><span class="grad">become your lawsuit.</span></h1>
-    <p class="landing-sub">A customized legal survival checklist for your business — built from real cases where ignored risks turned into expensive lawsuits.</p>
+    <p class="landing-sub">A customized legal survival checklist for your business, built from real cases where ignored risks turned into expensive lawsuits.</p>
     <div class="path-grid">
       <div class="path-card c-gold" onclick="start(false)">
         <div class="pc-icon bg-gold">🛠️</div>
         <h3>Build Your Guide</h3>
-        <p>Tell us your industry and what you're worried about. Get a checklist tailored to your specific risks — plus critical gaps you may be overlooking.</p>
+        <p>Tell us your industry and what you're worried about. Get a checklist tailored to your specific risks, plus critical gaps you may be overlooking.</p>
         <div class="pc-cta tc-gold">Get started →</div>
       </div>
       <div class="path-card c-red" onclick="start(true)">
@@ -154,7 +154,7 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
       </div>
     </div>
     <div class="trust-row">
-      <div><div class="t-num">$2.86M</div><div class="t-lbl">McDonald's verdict</div></div>
+      <div><div class="t-num">$2.86M</div><div class="t-lbl">Initial jury award</div></div>
       <div><div class="t-num">700+</div><div class="t-lbl">Prior complaints ignored</div></div>
       <div><div class="t-num">180-190°F</div><div class="t-lbl">Coffee temperature</div></div>
     </div>
@@ -167,7 +167,7 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
     <div class="steps"><div class="s-dot active"></div><div class="s-dot"></div><div class="s-dot"></div></div>
     <div class="picker-hd">
       <h2>What kind of business do you run?</h2>
-      <p>This shapes which industry-specific risks appear in your checklist — on top of the general rules every business needs.</p>
+      <p>This shapes which industry-specific risks appear in your checklist, on top of the general rules every business needs.</p>
     </div>
     <div class="opt-grid">
       <div class="opt" data-v="restaurant" onclick="pickInd(this)">
@@ -192,7 +192,7 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
       </div>
       <div class="opt" data-v="other" onclick="pickInd(this)">
         <div class="opt-top"><div class="opt-icon bg-gray">🧩</div><h4>Other / Mixed</h4><div class="opt-tick" id="it-other"></div></div>
-        <p>Something else — show me everything</p>
+        <p>Something else, show me everything</p>
       </div>
     </div>
     <div class="nav-row">
@@ -264,10 +264,10 @@ footer{text-align:center;padding:28px 24px;font-size:12px;opacity:.3;border-top:
     <div id="checklistArea"></div>
     <div id="gapsArea"></div>
     <div style="text-align:center;margin-top:32px">
-      <button class="btn btn-g" onclick="show('s3');resetProgress()">← Change Selections</button>
+      <button class="btn btn-g" onclick="changeSelections()">← Change Selections</button>
     </div>
   </div>
-  <footer>Legal Survival Guide · Liebeck v. McDonald's (1994) · For educational purposes only — not legal advice; laws vary by state and industry.</footer>
+  <footer>Legal Survival Guide · Liebeck v. McDonald's (1994) · For educational purposes only, not legal advice; laws vary by state and industry.</footer>
 </section>
 
 <script>
@@ -288,7 +288,7 @@ const GENERAL = {
     sub:'Product liability, premises safety, and known hazards',
     items:[
       {id:'cg1', label:'Document every customer complaint in writing',
-       detail:'Keep a dated log with names and what was reported. McDonald\'s had 700+ burn complaints on record — that paper trail showed they knew the risk and ignored it.',
+       detail:'Keep a dated log with names and what was reported. McDonald\'s had 700+ burn complaints on record, that paper trail showed they knew the risk and ignored it.',
        missed:true},
       {id:'cg2', label:'Post clear warnings for all known hazards',
        detail:'Hot surfaces, wet floors, and sharp edges can create serious liability if customers are not adequately warned. Signs should be visible and specific.',
@@ -296,15 +296,27 @@ const GENERAL = {
       {id:'cg3', label:'Address reported hazards before someone gets hurt',
        detail:'A complaint log showing you knew about a problem but didn\'t fix it is worse than no log at all. Every complaint needs a documented follow-up action.',
        missed:true},
+      {id:'cg6', label:'Don\'t make a product more dangerous than its normal use requires',
+       detail:'McDonald\'s served coffee at 180\u2013190\u00b0F \u2014 far hotter than needed to drink, and hot enough to cause third-degree burns in seconds. A product that is more dangerous than necessary for its ordinary use can be found defective even if it technically works as intended.',
+       missed:true},
+      {id:'cg7', label:'Make warnings match the severity of the risk',
+       detail:'A small "Caution: Hot" label was treated as inadequate for a liquid that could cause third-degree burns. The strength and specificity of a warning has to be proportional to how badly the product can hurt someone.',
+       missed:true},
+      {id:'cg8', label:'Treat a pattern of complaints as legal notice of a known risk',
+       detail:'700+ prior burn reports meant McDonald\'s had documented knowledge of the danger. Ignoring a known, repeating hazard helped support the jury\'s $2.7M punitive damages award.',
+       missed:true},
+      {id:'cg9', label:'Respond to complaints early \u2014 before they become lawsuits',
+       detail:'Liebeck initially asked McDonald\'s for just $20,000 to cover her medical bills. McDonald\'s offered $800 and refused a mediator\'s recommendation of $225,000. That $20,000 problem became a multimillion-dollar verdict. Addressing complaints quickly and fairly is one of the most effective ways to avoid litigation.',
+       missed:false},
       {id:'cg4', label:'Carry adequate general liability insurance',
-       detail:'Workers\' comp covers employees. General liability covers customers and visitors. Review your coverage limits annually.',
+       detail:'Workers\' comp covers employees. General liability helps cover customer and visitor injury claims. Review your coverage limits regularly.',
        missed:false},
       {id:'cg5', label:'Inspect your premises regularly and log the findings',
-       detail:'Dated inspection records show a jury you took safety seriously — even if an accident still happened.',
+       detail:'Dated inspection records show a jury you took safety seriously, even if an accident still happened.',
        missed:false},
     ],
-    callout:{label:'📌 McDonald\'s Case',
-     text:'McDonald\'s received 700+ burn complaints before the Liebeck lawsuit. The jury found them 80% liable — not because an accident happened, but because they had documented proof they knew the risk and chose to ignore it.'}
+    callout:{label:'📌 Survival Guide Lesson',
+     text:'The safest pattern for business owners is simple: track complaints, review repeat problems, document follow-up, and change unsafe practices before an injury turns into a lawsuit.'}
   },
   employee: {
     color:'#e67e22', icon:'👷',
@@ -363,7 +375,7 @@ const GENERAL = {
        detail:'Verbal agreements are enforceable but nearly impossible to prove. Control the written record.',
        missed:false},
       {id:'ctg2', label:'Understand that "I was joking" is not a legal defense',
-       detail:'Courts use the objective standard: if a reasonable person would believe you intended a real agreement, you\'re bound by it — regardless of what you were thinking.',
+       detail:'Courts use the objective standard: if a reasonable person would believe you intended a real agreement, you\'re bound by it, regardless of what you were thinking.',
        missed:false},
       {id:'ctg3', label:'Include offer, acceptance, and consideration in every contract',
        detail:'A valid contract needs something of value exchanged by both parties. Missing any element makes it potentially unenforceable.',
@@ -372,7 +384,7 @@ const GENERAL = {
        detail:'A manager who signs an agreement without approval may still bind your company if their authority appears legitimate. Define signing authority in writing.',
        missed:false},
       {id:'ctg5', label:'Keep organized copies of every signed agreement',
-       detail:'Disputes come down to "what did we agree to?" You need a paper trail — stored somewhere secure, not just in someone\'s inbox.',
+       detail:'Disputes come down to "what did we agree to?" You need a paper trail, stored somewhere secure, not just in someone\'s inbox.',
        missed:false},
     ],
     callout:{label:'📌 Contract Lesson',
@@ -387,7 +399,7 @@ const GENERAL = {
        detail:'Federal trademark registration gives you nationwide protection and the legal right to stop others from using a confusingly similar name.',
        missed:false},
       {id:'ipg2', label:'Use written agreements to own what contractors create',
-       detail:'Without a "work for hire" clause, the person who creates something may own it — even if you paid for it.',
+       detail:'Without a "work for hire" clause, the person who creates something may own it, even if you paid for it.',
        missed:false},
       {id:'ipg3', label:'Use NDAs when sharing confidential business information',
        detail:'Trade secrets are only protected if you treat them as secret. Sharing proprietary processes without confidentiality protections can seriously weaken your ability to protect them.',
@@ -400,7 +412,7 @@ const GENERAL = {
        missed:false},
     ],
     callout:{label:'💡 Why This Matters',
-     text:'Many small businesses lose valuable IP rights simply because they never formalized them. Trademarks and trade secrets don\'t protect themselves — they require proactive action.'}
+     text:'Many small businesses lose valuable IP rights simply because they never formalized them. Trademarks and trade secrets don\'t protect themselves, they require proactive action.'}
   },
   hiring: {
     color:'#1abc9c', icon:'🧑‍💼',
@@ -417,14 +429,14 @@ const GENERAL = {
        detail:'Misclassifying employees as contractors creates back tax liability, benefit obligations, and regulatory penalties.',
        missed:false},
       {id:'hg4', label:'Investigate every harassment or discrimination complaint promptly',
-       detail:'Failing to investigate — or retaliating against the person who filed — can create serious liability and HR problems. Document every step.',
+       detail:'Failing to investigate, or retaliating against the person who filed, can create serious liability and HR problems. Document every step.',
        missed:false},
       {id:'hg5', label:'Follow consistent termination procedures with documentation',
        detail:'Written performance records, progressive discipline, and a consistent process make wrongful termination claims much harder to win.',
        missed:false},
     ],
     callout:{label:'📌 Common Costly Mistake',
-     text:'Many small businesses skip formal HR processes because they feel corporate. But employment disputes are among the most common lawsuits businesses face — and the most preventable with basic documentation.'}
+     text:'Many small businesses skip formal HR processes because they feel corporate. But employment disputes are among the most common lawsuits businesses face, and the most preventable with basic documentation.'}
   }
 };
 
@@ -458,7 +470,7 @@ const INDUSTRY_ITEMS = {
     ],
     manufacturing:[
       {label:'Test finished products against your stated specifications before shipping',
-       detail:'Products that fail to meet advertised standards — especially safety-related ones — expose you to product liability even if the customer is a business, not a consumer.',
+       detail:'Products that fail to meet advertised standards, especially safety-related ones, expose you to product liability even if the customer is a business, not a consumer.',
        missed:false},
       {label:'Maintain Material Safety Data Sheets for all hazardous substances',
        detail:'Customers and downstream users may be harmed by improper handling. Safety data sheets are legally required and help show the business handled hazardous materials responsibly.',
@@ -485,7 +497,7 @@ const INDUSTRY_ITEMS = {
        detail:'Kitchen floors are a major source of restaurant employee injuries. Non-slip mats are inexpensive; preventable slip-and-fall claims are not.',
        missed:false},
       {label:'Train staff on safe handling of hot equipment and liquids',
-       detail:'Burns from fryers, ovens, and hot beverages are common — and preventable. Documented training matters when a claim is filed.',
+       detail:'Burns from fryers, ovens, and hot beverages are common, and preventable. Documented training matters when a claim is filed.',
        missed:true},
       {label:'Enforce knife safety protocols and cut-resistant glove use',
        detail:'Lacerations are the second most common restaurant employee injury. Glove policies need to be documented and enforced, not just mentioned at hiring.',
@@ -499,7 +511,7 @@ const INDUSTRY_ITEMS = {
        detail:'Missing guards on presses and other machinery is a serious machine-safety failure that can lead to OSHA problems, severe injuries, and major legal exposure.',
        missed:true},
       {label:'Require and enforce PPE use for every job that needs it',
-       detail:'Having PPE available isn\'t enough — use must be enforced and documented. An unenforced PPE policy carries much less weight after an injury.',
+       detail:'Having PPE available isn\'t enough, use must be enforced and documented. An unenforced PPE policy carries much less weight after an injury.',
        missed:false},
       {label:'Conduct equipment-specific training before any operator uses machinery',
        detail:'Generic safety training doesn\'t cover machine-specific risks. Operators need documented training on each specific piece of equipment.',
@@ -507,7 +519,7 @@ const INDUSTRY_ITEMS = {
     ],
     construction:[
       {label:'Enforce fall protection requirements at all heights above 6 feet',
-       detail:'Falls are the leading cause of construction fatalities. OSHA requires fall protection at 6 feet in construction — guardrails, safety nets, or personal fall arrest.',
+       detail:'Falls are the leading cause of construction fatalities. OSHA requires fall protection at 6 feet in construction, guardrails, safety nets, or personal fall arrest.',
        missed:false},
       {label:'Follow confined space entry procedures every time',
        detail:'Confined space entries without proper atmospheric testing and standby personnel have killed multiple workers at once. The procedures exist for a reason.',
@@ -521,7 +533,7 @@ const INDUSTRY_ITEMS = {
        detail:'Back injuries from improper lifting are among the most common retail workers\' comp claims. They\'re also almost entirely preventable with basic training.',
        missed:false},
       {label:'Use proper ladder safety procedures for stocking high shelves',
-       detail:'Falls from ladders are a top retail injury. Employees need documented training — never use a ladder alone, maintain three points of contact.',
+       detail:'Falls from ladders are a top retail injury. Employees need documented training, never use a ladder alone, maintain three points of contact.',
        missed:false},
     ],
     office:[
@@ -576,7 +588,7 @@ const INDUSTRY_ITEMS = {
       {label:'Include indemnification clauses in contracts with distributors and retailers',
        detail:'If a downstream seller modifies or misrepresents your product, indemnification language can protect you from liability you didn\'t create.',
        missed:false},
-      {label:'Define warranty terms explicitly — and only promise what you can deliver',
+      {label:'Define warranty terms explicitly, and only promise what you can deliver',
        detail:'Vague warranty language creates open-ended liability. Be specific about what you warrant, for how long, and what\'s excluded.',
        missed:false},
     ],
@@ -600,8 +612,8 @@ const INDUSTRY_ITEMS = {
     ],
     other:[]
   },
-  ip:{restaurant:[],retail:[{label:'Protect your brand with a federal trademark before someone else does',detail:'Retail brands are highly imitable. A federal trademark filing is inexpensive compared to the cost of rebranding after a cease and desist.',missed:false}],manufacturing:[{label:'Document your manufacturing processes as trade secrets with NDAs for all employees who access them',detail:'Proprietary processes are often more valuable than patents — but only if you treat them as secret. NDAs and access controls are your protection.',missed:false}],construction:[],office:[{label:'Use engagement letters that specify who owns work product created for clients',detail:'Without explicit IP assignment language, there may be ambiguity about whether a client owns custom work you created for them.',missed:false}],other:[]},
-  hiring:{restaurant:[{label:'Document tip policies, tip pools, and tip credits in writing',detail:'Tip wage violations are one of the most common labor law problems in food service. Federal and state tip rules vary — make sure your policy is documented and compliant.',missed:false},{label:'Track and record all hours worked, including overtime',detail:'Off-the-clock work claims are common in restaurants. Time records must be accurate — rounding or adjusting punches can create serious wage-and-hour liability.',missed:false}],manufacturing:[{label:'Document all shift differential, overtime, and piece-rate pay calculations',detail:'Manufacturing payroll errors are common with complex pay structures. Wage and hour problems can quickly turn into expensive employee claims.',missed:false},{label:'Have a written policy for medical leave and return-to-work after injury',detail:'How you handle workers returning after an injury is heavily regulated. A written policy applied consistently helps reduce retaliation risk.',missed:false}],construction:[{label:'Keep I-9 documentation current for every worker on every job site',detail:'Construction is a heavily audited industry for worker documentation. Violations carry per-worker fines that add up quickly on larger sites.',missed:false}],retail:[{label:'Document your scheduling practices and any predictive scheduling requirements in your area',detail:'Several states and cities now require advance notice of schedules. Violations carry per-employee fines — check local law.',missed:false}],office:[{label:'Have a written remote work policy that addresses hours, equipment, and confidentiality',detail:'Remote work creates new HR ambiguity around overtime, expense reimbursement, and data security. A clear written policy prevents most disputes.',missed:false}],other:[]}
+  ip:{restaurant:[],retail:[{label:'Protect your brand with a federal trademark before someone else does',detail:'Retail brands are highly imitable. A federal trademark filing is inexpensive compared to the cost of rebranding after a cease and desist.',missed:false}],manufacturing:[{label:'Document your manufacturing processes as trade secrets with NDAs for all employees who access them',detail:'Proprietary processes are often more valuable than patents, but only if you treat them as secret. NDAs and access controls are your protection.',missed:false}],construction:[],office:[{label:'Use engagement letters that specify who owns work product created for clients',detail:'Without explicit IP assignment language, there may be ambiguity about whether a client owns custom work you created for them.',missed:false}],other:[]},
+  hiring:{restaurant:[{label:'Document tip policies, tip pools, and tip credits in writing',detail:'Tip wage violations are one of the most common labor law problems in food service. Federal and state tip rules vary, make sure your policy is documented and compliant.',missed:false},{label:'Track and record all hours worked, including overtime',detail:'Off-the-clock work claims are common in restaurants. Time records must be accurate, rounding or adjusting punches can create serious wage-and-hour liability.',missed:false}],manufacturing:[{label:'Document all shift differential, overtime, and piece-rate pay calculations',detail:'Manufacturing payroll errors are common with complex pay structures. Wage and hour problems can quickly turn into expensive employee claims.',missed:false},{label:'Have a written policy for medical leave and return-to-work after injury',detail:'How you handle workers returning after an injury is heavily regulated. A written policy applied consistently helps reduce retaliation risk.',missed:false}],construction:[{label:'Keep I-9 documentation current for every worker on every job site',detail:'Construction is a heavily audited industry for worker documentation. Violations carry per-worker fines that add up quickly on larger sites.',missed:false}],retail:[{label:'Document your scheduling practices and any predictive scheduling requirements in your area',detail:'Several states and cities now require advance notice of schedules. Violations carry per-employee fines, check local law.',missed:false}],office:[{label:'Have a written remote work policy that addresses hours, equipment, and confidentiality',detail:'Remote work creates new HR ambiguity around overtime, expense reimbursement, and data security. A clear written policy prevents most disputes.',missed:false}],other:[]}
 };
 
 // ═══════════════════════════════════════════
@@ -628,7 +640,7 @@ const GAP_RULES = [
 
 // Demo presets
 const DEMO_IND = 'restaurant';
-const DEMO_CONS = ['customer','employee','osha'];
+const DEMO_CONS = ['customer'];
 
 // ═══════════════════════════════════════════
 // NAV
@@ -670,17 +682,24 @@ function resetProgress(){
   document.getElementById('progFill').style.width='0%';
 }
 
+function changeSelections(){
+  // Demo has no picker screens, so send it back to the landing page instead
+  if(isDemo){ goHome(); return; }
+  show('s3'); resetProgress();
+}
+
 function start(demo){
   isDemo=demo;
   document.getElementById('restartBtn').style.display='block';
   if(demo){
+    // Demo jumps straight to the McDonald's case checklist, no picker screens
     document.getElementById('demoBanner').classList.add('show');
-    document.getElementById('demoHint').textContent='Industry pre-selected based on McDonald\'s case. Click Next to continue.';
+    document.getElementById('demoHint').textContent='Showing the Liebeck v. McDonald\'s case checklist.';
     selInd=DEMO_IND;
-    const indOpt = document.querySelector('#s2 .opt[data-v="'+DEMO_IND+'"]');
-    if(indOpt) highlightOpt(indOpt,'#e74c3c');
-    document.getElementById('indCtr').textContent='Restaurant / Food Service selected';
-    document.getElementById('indNext').disabled=false;
+    selCons.clear();
+    DEMO_CONS.forEach(v=>selCons.add(v));
+    buildResults();
+    return;
   }
   show('s2');
 }
@@ -760,26 +779,40 @@ function buildResults(){
   const banner=document.getElementById('sumBanner');
   if(isDemo){
     banner.classList.add('demo-mode');
-    document.getElementById('sumLbl').textContent="DEMO — LIEBECK V. McDONALD'S (1994)";
+    document.getElementById('sumLbl').textContent="DEMO: LIEBECK V. McDONALD'S (1994)";
     document.getElementById('sumIcon').textContent='📖';
     document.getElementById('sumTitle').textContent="The McDonald's Case: Product-Safety Lessons";
-    document.getElementById('sumDesc').textContent='Items marked CASE ISSUE are the checklist points most directly connected to the lawsuit. Other sections show broader restaurant risk controls.';
+    document.getElementById('sumDesc').textContent='A focused walkthrough of the customer-safety and product-liability lessons from the case. Items marked CASE ISSUE are the risk areas tied most directly to the case.';
   } else {
     banner.classList.remove('demo-mode');
     document.getElementById('sumLbl').textContent='YOUR CUSTOM GUIDE';
     document.getElementById('sumIcon').textContent='📋';
     const indLabels={restaurant:'Restaurant',retail:'Retail',manufacturing:'Manufacturing',office:'Office',construction:'Construction',other:'Business'};
-    document.getElementById('sumTitle').textContent='Legal Survival Guide — '+(indLabels[selInd]||'Your Business');
+    document.getElementById('sumTitle').textContent='Legal Survival Guide: '+(indLabels[selInd]||'Your Business');
     document.getElementById('sumDesc').textContent='Core legal risk areas plus '+( indLabels[selInd]||'your industry')+'-specific reminders.';
   }
 
-  const order=isDemo?['customer','employee','osha']:['customer','employee','osha','contracts','ip','hiring'];
+  const order=isDemo?['customer']:['customer','employee','osha','contracts','ip','hiring'];
   let totalItems=0;
 
   order.forEach(key=>{
     if(!selCons.has(key)) return;
     const g=GENERAL[key];
-    const indItems=(INDUSTRY_ITEMS[key]&&INDUSTRY_ITEMS[key][selInd])||[];
+    let indItems;
+    if(selInd==='other'){
+      // "Show me everything", aggregate industry items across all industries, deduped by label
+      indItems=[];
+      const seen=new Set();
+      Object.keys(INDUSTRY_ITEMS[key]||{}).forEach(ind=>{
+        if(ind==='other') return;
+        (INDUSTRY_ITEMS[key][ind]||[]).forEach(it=>{
+          if(!seen.has(it.label)){seen.add(it.label);indItems.push(it);}
+        });
+      });
+    } else {
+      indItems=(INDUSTRY_ITEMS[key]&&INDUSTRY_ITEMS[key][selInd])||[];
+    }
+    if(isDemo) indItems=indItems.filter(i=>i.missed); // demo: only case-relevant industry items
     const allItems=[...g.items,...indItems];
     totalItems+=allItems.length;
 
